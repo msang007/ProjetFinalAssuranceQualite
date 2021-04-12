@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace COURS_.ProjetFinalAssuranceQualite
+{
+    class Grade
+    {
+
+        // creations des attributs de la classe Grade
+        
+        private Student numeroEtudiant;
+        private Course numeroCours;
+        private double note;
+
+        // Creation des proprietes de chacun des attributs 
+
+        public Student NumeroEtudiant
+        {
+            get { return numeroEtudiant; }
+            set { numeroEtudiant = value; }
+        }
+
+        public Course NumeroCours
+        {
+            get { return numeroCours; }
+            set { numeroCours = value; }
+        }
+
+        public double Note
+        {
+            get { return note; }
+            set { note = value; }
+        }
+
+
+        // Creation d'un constructeur de la classe Grade
+        
+
+        public Grade (Student numeroEtudiant, Course numeroCours, double note)
+        {
+            this.NumeroEtudiant = numeroEtudiant;
+            this.NumeroCours = numeroCours;
+            this.Note = note;
+        }
+
+
+        // Methode permettant de creer Une note Pour chaque Cours
+        
+        
+        public List<Grade> CreeGrade(Grade G)
+        {
+            List<Grade> ListeNote = new List<Grade>();
+            ListeNote.Add(G);
+            return ListeNote;
+        }
+        
+
+        // Methode qui permet d'afficher La note d'un Etudiant
+        
+
+        public string AfficheNote()
+        {
+            return (this.GetType().Name + " " + "Numero Etudiant:" + this.NumeroEtudiant + " Numero Du Cours:" + this.NumeroCours + " Note:" + this.Note );
+        }
+
+
+        //Methode qui va permettre de saisir la note d'un etudiant en fournissant son NumeroEtudiant
+        
+
+        public string SaisirNote( Student numeroEtudiant, double note)
+        {
+            return (this.GetType().Name+" Numero Etudiant Entree:"+numeroEtudiant+"\n"+
+                                          "Note Entree:"+note);
+        }
+    }
+}
