@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace COURS_.ProjetFinalAssuranceQualite
+{
+    class Student
+    {
+        // creation des attributs de la classe etudiant.
+        private string numeroEtudiant;
+        private string prenom;
+        private string nom;
+
+        // definition des proprietes de la classe etudiant.
+        public string NumeroEtudiant
+        {
+            get { return numeroEtudiant; }
+            set { numeroEtudiant = value; }
+        }
+
+        public string Prenom
+        {
+            get { return prenom; }
+            set { prenom = value; }
+        }
+
+        public string Nom
+        {
+            get { return nom; }
+            set { nom = value; }
+        }
+
+        // Definition des constructeurs permettant d'initialiser 
+        
+        
+        public Student (string numeroEtudiant, string prenom, string nom)
+        {
+            this.NumeroEtudiant = numeroEtudiant;
+            this.Prenom = prenom;
+            this.Nom = nom;
+        }
+
+
+        // Methode permettant de Cree un Nouvel Etudiant
+        // Methode qui prend un etudiant en parametre.
+        
+        
+        public List<Student> CreeEtudiant(Student E)
+        {
+            List<Student> ListeEtudiant = new List<Student>();
+            ListeEtudiant.Add(E);
+            return ListeEtudiant;
+        }
+
+
+        //Methode permettant d'afficher un etudiant sous forme de chaine de caractere
+        // Un etudiant est caracterise par son numero Etudiant, son Prenom et son Nom
+        
+        
+        public string AfficheEtudiant()
+        {
+            return (this.GetType().Name + " " + "Numero Etudiant:" + this.NumeroEtudiant + " Prenom:" + this.Prenom + " Nom:" + this.Nom);
+        }
+
+
+    }
+}
