@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace COURS_.ProjetFinalAssuranceQualite
+{
+    class Course
+    {
+        // Creation des attributs de la classe Cours
+        private string numeroCours;
+        private string codeCours;
+        private string titre;
+
+        // Definitions des proprietes de la classe Cours
+
+        public string NumeroCours
+        {
+            get { return numeroCours; }
+            set { numeroCours = value; }
+        }
+
+        public string CodeCours
+        {
+            get { return codeCours; }
+            set { codeCours = value; }
+        }
+
+        public string Titre
+        {
+            get { return titre; }
+            set { Titre = value; }
+        }
+
+        // Definition d'un constructeur de la classe Course 
+        public Course (string numeroCours, string code, string titre)
+        {
+            this.NumeroCours = numeroCours;
+            this.CodeCours = code;
+            this.Titre = titre;
+        }
+
+        // Methode permettant de creer des Cours
+
+        public List<Course> CreeCours(Course C)
+        {
+            List<Course> Listecours = new List<Course>();
+            Listecours.Add(C);
+            return Listecours;
+        }
+
+
+        // Methode qui permet d'afficher un Cours
+         
+        public string AfficheCours()
+        {
+            return (this.GetType().Name + " " + "Numero du Cours:" + this.NumeroCours + " Code:" + this.CodeCours + " Titre:" + this.Titre);
+        }
+    }
+}
