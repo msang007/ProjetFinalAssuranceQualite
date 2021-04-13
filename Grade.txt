@@ -48,7 +48,7 @@ namespace COURS_.ProjetFinalAssuranceQualite
         // Methode permettant de creer Une note Pour chaque Cours
         
         
-        public List<Grade> CreeGrade(Grade G)
+        public List<Grade> creeGrade(Grade G)
         {
             List<Grade> ListeNote = new List<Grade>();
             ListeNote.Add(G);
@@ -59,7 +59,7 @@ namespace COURS_.ProjetFinalAssuranceQualite
         // Methode qui permet d'afficher La note d'un Etudiant
         
 
-        public string AfficheNote()
+        public string afficheNote()
         {
             return (this.GetType().Name + " " + "Numero Etudiant:" + this.NumeroEtudiant + " Numero Du Cours:" + this.NumeroCours + " Note:" + this.Note );
         }
@@ -68,7 +68,7 @@ namespace COURS_.ProjetFinalAssuranceQualite
         //Methode qui va permettre de saisir la note d'un etudiant en fournissant son NumeroEtudiant
         
 
-        public string SaisirNote( Student numeroEtudiant, double note)
+        public string saisirNote( Student numeroEtudiant, double note)
         {
             return (this.GetType().Name+" Numero Etudiant Entree:"+numeroEtudiant+"\n"+
                                           "Note Entree:"+note);
