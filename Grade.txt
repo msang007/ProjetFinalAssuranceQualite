@@ -48,7 +48,7 @@ namespace COURS_.ProjetFinalAssuranceQualite
         // Methode permettant de creer Une note Pour chaque Cours
         
         
-        public List<Grade> creeGrade(Grade G)
+        public list<Grade> creeGrade(Grade G)
         {
             List<Grade> ListeNote = new List<Grade>();
             ListeNote.Add(G);
