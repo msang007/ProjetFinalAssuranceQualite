@@ -31,8 +31,6 @@ namespace COURS_.ProjetFinalAssuranceQualite
         }
 
         // Definition des constructeurs permettant d'initialiser 
-        
-        
         public Student (string numeroEtudiant, string prenom, string nom)
         {
             this.NumeroEtudiant = numeroEtudiant;
@@ -42,24 +40,27 @@ namespace COURS_.ProjetFinalAssuranceQualite
 
 
         // Methode permettant de Cree un Nouvel Etudiant
-        // Methode qui prend un etudiant en parametre.
-        
-        
-        public List<Student> CreeEtudiant(Student E)
+
+        public Student CreeEtudiant(string numeroEtudiant, string prenom, string nom)
         {
+            Student s1 = new Student(numeroEtudiant, prenom, nom);
+            return s1;
+
+            /*
             List<Student> ListeEtudiant = new List<Student>();
             ListeEtudiant.Add(E);
             return ListeEtudiant;
+            */
         }
 
-
         //Methode permettant d'afficher un etudiant sous forme de chaine de caractere
-        // Un etudiant est caracterise par son numero Etudiant, son Prenom et son Nom
-        
-        
+
         public string AfficheEtudiant()
         {
-            return (this.GetType().Name + " " + "Numero Etudiant:" + this.NumeroEtudiant + " Prenom:" + this.Prenom + " Nom:" + this.Nom);
+                   return ("Class:"+this.GetType().Name + "\n"+
+                                                "Numero Etudiant:" + this.NumeroEtudiant +"\n"+
+                                                " Prenom:" + this.Prenom +"\n"+
+                                                " Nom:" + this.Nom);
         }
 
 
