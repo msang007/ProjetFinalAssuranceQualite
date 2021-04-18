@@ -6,7 +6,7 @@ namespace COURS_.ProjetFinalAssuranceQualite
 {
     class Grade
     {
-
+        //Commentaires
         // creations des attributs de la classe Grade
 
 
@@ -35,7 +35,7 @@ namespace COURS_.ProjetFinalAssuranceQualite
             get { return note; }
             set { note = value; }
         }
-
+        
 
         // Creation d'un constructeur de la classe Grade
 
