@@ -61,7 +61,9 @@ namespace COURS_.ProjetFinalAssuranceQualite
 
         public string afficheNote()
         {
-            return (this.GetType().Name + " " + "Numero Etudiant:" + this.NumeroEtudiant + " Numero Du Cours:" + this.NumeroCours + " Note:" + this.Note );
+            return (this.GetType().Name + " " + "Numero Etudiant:" + this.NumeroEtudiant +"\n"+
+                                                " Numero Du Cours:" + this.NumeroCours +"\n"+
+                                                "Note:" + this.Note);
         }
 
 
@@ -70,8 +72,10 @@ namespace COURS_.ProjetFinalAssuranceQualite
 
         public string saisirNote( Student numeroEtudiant, double note)
         {
-            return (this.GetType().Name+" Numero Etudiant Entree:"+numeroEtudiant+"\n"+
+            return (this.GetType().Name+" Numero Etudiant Entree:"+this.NumeroEtudiant+"\n"+
+                                          "Numero Cours:"+this.NumeroCours+"\n"+
                                           "Note Entree:"+note);
         }
+        
     }
 }
