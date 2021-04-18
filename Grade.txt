@@ -8,20 +8,23 @@ namespace COURS_.ProjetFinalAssuranceQualite
     {
 
         // creations des attributs de la classe Grade
-        
-        private Student numeroEtudiant;
-        private Course numeroCours;
+
+
+        private string numeroEtudiant;
+        private string numeroCours;
         private double note;
+
 
         // Creation des proprietes de chacun des attributs 
 
-        public Student NumeroEtudiant
+
+        public string NumeroEtudiant
         {
             get { return numeroEtudiant; }
             set { numeroEtudiant = value; }
         }
 
-        public Course NumeroCours
+        public string NumeroCours
         {
             get { return numeroCours; }
             set { numeroCours = value; }
@@ -35,9 +38,9 @@ namespace COURS_.ProjetFinalAssuranceQualite
 
 
         // Creation d'un constructeur de la classe Grade
-        
 
-        public Grade (Student numeroEtudiant, Course numeroCours, double note)
+
+        public Grade (string numeroEtudiant, string numeroCours, double note)
         {
             this.NumeroEtudiant = numeroEtudiant;
             this.NumeroCours = numeroCours;
@@ -46,32 +49,44 @@ namespace COURS_.ProjetFinalAssuranceQualite
 
 
         // Methode permettant de creer Une note Pour chaque Cours
-        
-        
-        public list<Grade> creeGrade(Grade G)
+
+
+        public Grade CreeGrade(string numeroEtudiant, string numeroCours,double note)
         {
+            Grade G1 = new Grade(numeroEtudiant, numeroCours, note);
+            return G1;
+            /*
             List<Grade> ListeNote = new List<Grade>();
             ListeNote.Add(G);
             return ListeNote;
+            */
         }
-        
+
 
         // Methode qui permet d'afficher La note d'un Etudiant
-        
 
-        public string afficheNote()
+
+        public string AfficheNote()
         {
-            return (this.GetType().Name + " " + "Numero Etudiant:" + this.NumeroEtudiant + " Numero Du Cours:" + this.NumeroCours + " Note:" + this.Note );
+            return ("class:"+this.GetType().Name+"\n"+
+                                                "Numero Etudiant:" + this.NumeroEtudiant +"\n"+
+                                                " Numero Du Cours:" + this.NumeroCours + "\n"+
+                                                " Note:" + this.Note );
         }
 
 
         //Methode qui va permettre de saisir la note d'un etudiant en fournissant son NumeroEtudiant
-        
 
-        public string saisirNote( Student numeroEtudiant, double note)
+
+        public string SaisirNote( string numeroEtudiant, double note)
         {
             return (this.GetType().Name+" Numero Etudiant Entree:"+numeroEtudiant+"\n"+
+                                        "Numero Cours:"+NumeroCours+"\n"+
                                           "Note Entree:"+note);
         }
+
+
+
     }
 }
+
