@@ -1,1 +1,55 @@
-cec
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace COURS_.ProjetFinalAssuranceQualite
+{
+    class Test
+    {
+        public static void Main(string [] args)
+        {
+            //Affichage d'un etudiant sous sa representation textuelle.
+            Student s1 = new Student("2690424", "Mamadou", "Sangare");
+            string res = s1.AfficheEtudiant();
+            Console.WriteLine(res);
+            Console.WriteLine();
+
+            // Creation d'un Nouvel Etudiant puis On affiche l'etudiant suivant son numeroEtudiant, son prenom puis son nom.
+            Student s = s1.CreeEtudiant("2690505", "Juneid", "Gaffar");
+            string res2 = s.AfficheEtudiant();
+            Console.WriteLine(res2);
+            Console.WriteLine();
+
+            //Creation d'un nouvel Etudiant puis sa representation textuelle.
+            Student s3 = s1.CreeEtudiant("2711010", "DieuDonnee", "Omba");
+            string res3 = s3.AfficheEtudiant();
+            Console.WriteLine(res3);
+            Console.WriteLine();
+
+            //Creation d'un Cours.
+            Course c1 = new Course("IFM5204","B-05","AssuranceQualite");
+
+            //Creation d'un Objet Note pour la classe Grade et son affichage sous forme Textuelle.
+            Grade G1 = new Grade("2690505","ifm7575",85.5);
+            string NoteEtudiant = G1.AfficheNote();
+            Console.WriteLine(NoteEtudiant);
+            Console.WriteLine();
+
+            //Methode qui permet de saisir Une note quand on lui fournit le numeroEtudiant de l'etudiant et une note passe comme parametre.
+            string SaisirNote = G1.SaisirNote("2690505", 90);
+            Console.WriteLine(SaisirNote);
+            Console.WriteLine();
+
+
+            //Methode qui permet de cree des Course et permettre son affichage sous forme Textuelle.
+            Course c2 = c1.CreeCours("IFM2530", "B-022", "ProgrammationC#");
+            string AfficheCours = c2.AfficheCours();
+            Console.WriteLine(AfficheCours);
+            Console.WriteLine();
+
+
+
+        }
+    }
+}
+
