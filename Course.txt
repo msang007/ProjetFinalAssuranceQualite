@@ -28,7 +28,7 @@ namespace COURS_.ProjetFinalAssuranceQualite
         public string Titre
         {
             get { return titre; }
-            set { Titre = value; }
+            set { titre = value; }
         }
 
         // Definition d'un constructeur de la classe Course 
@@ -41,11 +41,16 @@ namespace COURS_.ProjetFinalAssuranceQualite
 
         // Methode permettant de creer des Cours
 
-        public List<Course> CreeCours(Course C)
+        public Course CreeCours(string numeroEtudiant, string prenom, string nom)
         {
+            Course C1 = new Course(numeroEtudiant, prenom, nom);
+            return C1;
+
+            /*
             List<Course> Listecours = new List<Course>();
             Listecours.Add(C);
             return Listecours;
+            */
         }
 
 
@@ -53,7 +58,11 @@ namespace COURS_.ProjetFinalAssuranceQualite
          
         public string AfficheCours()
         {
-            return (this.GetType().Name + " " + "Numero du Cours:" + this.NumeroCours + " Code:" + this.CodeCours + " Titre:" + this.Titre);
+            return ("Class:"+this.GetType().Name + "\n" +
+                    "Numero du Cours:" + this.NumeroCours + "\n"+
+                    " Code:" + this.CodeCours +"\n"+
+                    " Titre:" + this.Titre);
         }
+
     }
 }
