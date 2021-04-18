@@ -49,13 +49,16 @@ namespace COURS_.ProjetFinalAssuranceQualite
 
 
         // Methode permettant de creer Une note Pour chaque Cours
-
-
-        public Grade CreeGrade(string numeroEtudiant, string numeroCours,double note)
-        {
-            Grade G1 = new Grade(numeroEtudiant, numeroCours, note);
-            return G1;
            
+        public Grade CreeGrade(string numeroEtudiant, string numeroCours, double note)
+        {
+        Grade G1 = new Grade(numeroEtudiant, numeroCours, note);
+        return G1;
+        /*
+            List<Grade> ListeNote = new List<Grade>();
+            ListeNote.Add(G);
+            return ListeNote;
+            */
         }
 
 
@@ -85,4 +88,3 @@ namespace COURS_.ProjetFinalAssuranceQualite
 
     }
 }
-
