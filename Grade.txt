@@ -50,7 +50,7 @@ namespace COURS_.ProjetFinalAssuranceQualite
 
         // Methode permettant de creer Une note Pour chaque Cours
            
-        public Grade CreeGrade(string numeroEtudiant, string numeroCours, string note)
+        public Grade CreeGrade(string numeroEtudiant, string numeroCours, double note)
         {
         Grade G1 = new Grade(numeroEtudiant, numeroCours, note);
         return G1;
